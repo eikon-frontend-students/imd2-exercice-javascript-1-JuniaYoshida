@@ -18,12 +18,23 @@ function ToggleChange() {
 }
 boxClick.addEventListener("click", ToggleChange);
 
-var boxTriggerAll = document.querySelector(".box.trigget-all");
+var boxTriggerAll = document.querySelector(".box.trigger-all");
 
 function ToggleChange() {
-  boxNone.classList.toggle("is-active");
+  boxChangeColor.classList.toggle("is-active");
+  boxToggleColor.classList.toggle("is-active");
 }
-boxTriggerAll.classList.toggle("click", ToggleChange);
+boxTriggerAll.addEventListener("click", ToggleChange);
+
+var boxTriggerAllSelf = document.querySelector(".box.trigger-all-self");
+
+function ToggleChange() {
+  boxChangeColor.classList.toggle("is-active");
+  boxToggleColor.classList.toggle("is-active");
+  boxTriggerAllSelf.classList.toggle("is-active");
+}
+boxTriggerAllSelf.addEventListener("click", ToggleChange);
+
 // boxTrigger.addEventListener("click", function () {
 //   boxTrigger.classList.remove("is-active");
 // });
